@@ -14,4 +14,11 @@
         vitis_hls
         ```
         
-        Need to launch this before running notebook?
+        Need to launch this before running notebook
+
+
+# 2026-02-16: Optimization
+1. BRAM/DSP: Reuse factor, increases latency
+1. 864X64: Too large
+1. Precision: can lower as much as dynamic range? use unsigned?
+1. Do tests with 64X32 model
