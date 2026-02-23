@@ -1,4 +1,5 @@
 data/
 saved_models/
+videos/
 ** /__pycache__
 **/.ipynb_*
