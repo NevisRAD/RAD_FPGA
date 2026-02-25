@@ -1,5 +1,7 @@
 data/
 saved_models/
 videos/
-** /__pycache__
-**/.ipynb_*
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
