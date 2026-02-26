@@ -49,7 +49,7 @@ conda activate hls_RAD # conda environment with hls4ml
 
 ## Vitis workflow
 1. Launch `vitis` from terminal.
-1. Make new `Application Project`
+1. Make new `Application Project` as `XRT Native API's`
 1. In `NAME_kernels`, add the `.xo` file to `src`
 1. Choose `myproject` as hardware function, build with hardware target
 1. Add host files to `NAME[x86]` src
