@@ -35,15 +35,8 @@ conda activate hls_RAD # conda environment with hls4ml
 1. Launch `vitis_hls` from terminal. GUI IDE will open
 1. Open project
     1. Choose `myproject_prj`
-    1. Modify the input and prediction to be the original input and prediction from python model. Both need to be in `.dat` format
-    1. `Test Bench/myproject_test.cpp`
-        ```C
-        int main(int argc, char **argv) {
-        // load input data from text file
-        std::ifstream fin("tb_data/tb_input_features.dat");
-        // load predictions from text file
-        std::ifstream fpr("tb_data/tb_output_predictions.dat");
-        ```
+    1. Copy over the `myproject_test.cpp`, and add `myproject_axi.*` to the `firmware` folder. Modify `N_IN` in `myproject_axi.h` to match the input.
+    1. `Project Settings` --> Set `myproject_axi` as top
     1. C simulation --> C synthesis (choose `Vitis` target)
     1. Export to Vitis: `Export RTL` (IP (`.zip`) or `.xo`)
 
@@ -51,7 +44,7 @@ conda activate hls_RAD # conda environment with hls4ml
 1. Launch `vitis` from terminal.
 1. Make new `Application Project` as `XRT Native API's`
 1. In `NAME_kernels`, add the `.xo` file to `src`
-1. Choose `myproject` as hardware function, build with hardware target
+1. Choose `myproject_axi` as hardware function, build with hardware target
 1. Add host files to `NAME[x86]` src
     1. Modify `host.h` to match input size (2048 = 64 X 32)
     ```C
